@@ -29,6 +29,14 @@ class Person {
 		return $this->$key;
 	}
 
+	function __isset($key) {
+		return isset($this->$key);
+	}
+
+	function __unset($key) {
+		unset($this->$key);
+	}
+
 	function echo () {
 		echo $this->name . " " . $this->sex . " " . $this->age . "\n";
 	}
@@ -44,6 +52,9 @@ $a->echo();
 $a->sex = 'G';
 $a->echo();
 
-echo $a->name;
-echo $a->sex;
-echo $a->age;
+echo $a->name . "\n";
+echo $a->sex . "\n";
+echo $a->age . "\n";
+
+var_dump(isset($a->name));
+unset($a->name);
