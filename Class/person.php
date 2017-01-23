@@ -1,5 +1,5 @@
 <?php
-//类的魔术方法
+//magic methods
 class Person {
 	private $name;
 	private $sex;
@@ -58,3 +58,4 @@ echo $a->age . "\n";
 
 var_dump(isset($a->name));
 unset($a->name);
+
